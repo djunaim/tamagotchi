@@ -2,20 +2,20 @@ import utilities from '../helpers/utilities';
 
 let full = 100;
 
+const feed = (e) => {
+  const buttonID = e.target.id;
+  if (buttonID === 'salad') {
+    full = Math.min(full + 10, 100);
+    utilities.printToDOM('max', full);
+  } else if (buttonID === 'burger') {
+    full = Math.max(full - 3, 0);
+    utilities.printToDOM('max', full);
+  }
+};
+
 const eventListener = () => {
   document.getElementById('salad').addEventListener('click', feed);
   document.getElementById('burger').addEventListener('click', feed);
-};
-
-const feed = (e) => {
-  const buttonID = e.target.id;
-  if (buttonID === 'salad' && maxFeed !== 100) {
-    const newFull = full + 10;
-    utilities.printToDOM('max', newFull);
-  } else if (buttonID === 'burger') {
-    const badFull = full - 3;
-    utilities.printToDOM('max', badFull);
-  }
 };
 
 const eatButton = () => {
