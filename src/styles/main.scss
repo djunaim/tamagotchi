@@ -6,32 +6,8 @@ body {
     padding: 0;
 }
 
-div {
+.quad {
     position: fixed;
     width: 50%;
     height: 50%;
-}
-
-#eat {
-    top: 0;
-    left: 0;
-    background-color: moccasin;
-}
-
-#play {
-    top: 0;
-    left: 50%;
-    background-color: burlywood
-}
-
-#fight {
-    top: 50%;
-    left: 0;
-    background-color: cornsilk
-}
-
-#sleep {
-    top: 50%;
-    left: 50%;
-    background-color: bisque;
 }
