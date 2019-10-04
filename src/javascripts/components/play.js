@@ -19,10 +19,10 @@ const eventListener = () => {
 };
 
 const playButton = () => {
-  let domString = '<h1>PLAY</h1>';
-  domString += `<h2 id="playing">${fun}</h2>`;
-  domString += '<button id="superFun" type="button">Super Fun</button>';
-  domString += '<button id="slightlyFun">Slightly Fun</button>';
+  let domString = '<h1 class="playPosition">PLAY</h1>';
+  domString += `<h2 class="playPosition" id="playing">${fun}</h2>`;
+  domString += '<div class="playPosition"> <button id="superFun" type="button">Super Fun</button>';
+  domString += '<button id="slightlyFun">Slightly Fun</button></div>';
   utilities.printToDOM('play', domString);
   eventListener();
 };

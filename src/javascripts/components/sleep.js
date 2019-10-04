@@ -19,10 +19,10 @@ const eventListener = () => {
 };
 
 const sleepButton = () => {
-  let domString = '<h1>SLEEP</h1>';
-  domString += `<h2 id="sleepy">${energy}</h2>`;
-  domString += '<button id="nap" type="button">Nap</button>';
-  domString += '<button id="deepSlumber">Deep Slumber</button>';
+  let domString = '<h1 class="sleepPosition">SLEEP</h1>';
+  domString += `<h2 class="sleepPosition" id="sleepy">${energy}</h2>`;
+  domString += '<div class="sleepPosition"> <button id="nap" type="button">Nap</button>';
+  domString += '<button id="deepSlumber">Deep Slumber</button> </div>';
   utilities.printToDOM('sleep', domString);
   eventListener();
 };
