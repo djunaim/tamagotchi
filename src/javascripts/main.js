@@ -1,12 +1,8 @@
 import '../styles/main.scss';
-import eat from './components/eat';
-import sleep from './components/sleep';
-import fight from './components/fight';
-import play from './components/play';
-import '../styles/eat.scss';
-import '../styles/fight.scss';
-import '../styles/play.scss';
-import '../styles/sleep.scss';
+import eat from './components/eat/eat';
+import sleep from './components/sleep/sleep';
+import fight from './components/fight/fight';
+import play from './components/play/play';
 
 const init = () => {
   eat.eatButton();
