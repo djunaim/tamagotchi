@@ -4,6 +4,7 @@
 A website where you can play with your online pet.
 
 ## Screenshots
+![homepage](https://raw.githubusercontent.com/djunaim/tamagotchi/master/src/screenshots/homepage.PNG)
 
 ## How To Run
 * Clone down this project
