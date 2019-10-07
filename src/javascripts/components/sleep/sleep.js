@@ -7,10 +7,10 @@ const rest = (e) => {
   const buttonID = e.target.id;
   if (buttonID === 'nap') {
     energy = Math.min(energy + 10, 100);
-    utilities.printToDOM('sleepy', energy);
+    document.getElementById('sleepy').value = energy;
   } else if (buttonID === 'deepSlumber') {
     energy = Math.min(energy + 60, 100);
-    utilities.printToDOM('sleepy', energy);
+    document.getElementById('sleepy').value = energy;
   }
 };
 
@@ -21,7 +21,7 @@ const eventListener = () => {
 
 const sleepButton = () => {
   let domString = '<h1 class="sleepPosition">SLEEP</h1>';
-  domString += `<h2 class="sleepPosition" id="sleepy">${energy}</h2>`;
+  domString += `<div class="sleepPosition"><progress max="100" value=${energy}  id="sleepy"></progress></div>`;
   domString += '<div class="sleepPosition"> <button id="nap" type="button">Nap</button>';
   domString += '<button id="deepSlumber">Deep Slumber</button> </div>';
   utilities.printToDOM('sleep', domString);
