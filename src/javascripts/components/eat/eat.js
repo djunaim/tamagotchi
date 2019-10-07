@@ -7,11 +7,9 @@ const feed = (e) => {
   const buttonID = e.target.id;
   if (buttonID === 'dorayaki') {
     full = Math.min((Math.random() * full) + 10, 100);
-    console.log(full);
     document.getElementById('eatBar').value = full;
   } else if (buttonID === 'burger') {
     full = Math.max((Math.random() * full) - 3, 0);
-    console.log(full);
     document.getElementById('eatBar').value = full;
   }
 };
@@ -23,7 +21,7 @@ const eventListener = () => {
 
 const eatButton = () => {
   let domString = '<h1>EAT</h1>';
-  domString += `<progress max="100" value=${full} id="eatBar"></progress>`;
+  domString += `<p id="eatBar"> <progress max="100" value=${full}></progress></p>`;
   domString += '<button id="dorayaki" type="button">dorayaki</button>';
   domString += '<button id="burger">Burger</button>';
   utilities.printToDOM('eat', domString);
