@@ -6,10 +6,10 @@ let energy = 50;
 const rest = (e) => {
   const buttonID = e.target.id;
   if (buttonID === 'nap') {
-    energy = Math.min(energy + 10, 100);
+    energy = Math.min((Math.random() * energy) + 10, 100);
     document.getElementById('sleepy').value = energy;
   } else if (buttonID === 'deepSlumber') {
-    energy = Math.min(energy + 60, 100);
+    energy = Math.min((Math.random() * energy) + 60, 100);
     document.getElementById('sleepy').value = energy;
   }
 };

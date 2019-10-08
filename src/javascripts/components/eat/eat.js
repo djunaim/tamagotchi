@@ -21,7 +21,7 @@ const eventListener = () => {
 
 const eatButton = () => {
   let domString = '<h1>EAT</h1>';
-  domString += `<p id="eatBar"> <progress max="100" value=${full}></progress></p>`;
+  domString += `<p> <progress id="eatBar" max="100" value=${full}></progress></p>`;
   domString += '<button id="dorayaki" type="button">dorayaki</button>';
   domString += '<button id="burger">Burger</button>';
   utilities.printToDOM('eat', domString);

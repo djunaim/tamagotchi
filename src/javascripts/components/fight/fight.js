@@ -6,10 +6,10 @@ let strength = 100;
 const action = (e) => {
   const buttonID = e.target.id;
   if (buttonID === 'braveRun') {
-    strength = Math.min(strength + 1, 100);
+    strength = Math.min((Math.random() * strength) + 1, 100);
     document.getElementById('fightBar').value = strength;
   } else if (buttonID === 'violence') {
-    strength = Math.max(strength - 10, 0);
+    strength = Math.max((Math.random() * strength) - 10, 0);
     document.getElementById('fightBar').value = strength;
   }
 };
