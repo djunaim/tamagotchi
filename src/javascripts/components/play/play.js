@@ -6,10 +6,10 @@ let fun = 50;
 const playing = (e) => {
   const buttonID = e.target.id;
   if (buttonID === 'superFun') {
-    fun = Math.min(fun + 50, 100);
+    fun = Math.min((Math.random() * fun) + 50, 100);
     document.getElementById('playing').value = fun;
   } else if (buttonID === 'slightlyFun') {
-    fun = Math.min(fun + 2, 100);
+    fun = Math.min((Math.random() * fun) + 2, 100);
     document.getElementById('playing').value = fun;
   }
 };
